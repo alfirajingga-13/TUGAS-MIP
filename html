@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Denah Pabrik Ikan Beku Fillet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .denah {
+            background: white;
+            width: 1100px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 2px solid #333;
+        }
+        h1 {
+            text-align: center;
+            color: #1a3a5c;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a3a5c;
+        }
+        /* Fasilitas Pendukung */
+        .fasilitas {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+        }
+        .fas-item {
+            background: #9E9E9E;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            flex: 1;
+            font-size: 14px;
+        }
+        .fas-item.lab { background: #7B8A9E; }
+        .fas-item.tk { background: #8D6E63; }
+        .fas-item.mesin { background: #424242; }
+        
+        /* Area Parkir */
+        .parkir {
+            background: #555;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        
+        /* Zona Produksi (Layout Garis) */
+        .zona-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .zona {
+            width: 150px;
+            height: 140px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .zona1 { background: #4A90E2; }  /* Biru muda - Penerimaan */
+        .zona2 { background: #1E3A8A; }  /* Biru tua - Cool Room */
+        .zona3 { background: #2E7D32; }  /* Hijau - Produksi */
+        .zona4 { background: #F4D03F; color: #333; }  /* Kuning - Pengemasan */
+        .zona5 { background: #6A1B9A; }  /* Ungu - Freezer */
+        .zona6 { background: #E67E22; }  /* Oranye - Pengiriman */
+        
+        .zona h3 { font-size: 14px; margin-bottom: 5px; }
+        .zona p { font-size: 10px; margin: 3px 0; }
+        .temp { font-size: 11px; background: rgba(0,0,0,0.3); display: inline-block; padding: 2px 6px; border-radius: 10px; margin-top: 5px; }
+        
+        /* Panah */
+        .panah {
+            font-size: 35px;
+            margin: 0 5px;
+            color: #FF0000;
+            font-weight: bold;
+        }
+        
+        /* Aliran Produksi */
+        .aliran {
+            text-align: center;
+            background: #FFEBEE;
+            padding: 8px;
+            margin: 15px 0;
+            border-radius: 20px;
+            color: #C62828;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        
+        /* Legenda */
+        .legenda {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            font-size: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .leg-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .warna-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 11px;
+            color: #777;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="denah">
+    <h1>🏭 PABRIK PENGOLAHAN IKAN BEKU FILLET 🐟</h1>
+    <div class="subtitle">DENAH TATA LETAK (PLAN LAYOUT) - PRODUCT LAYOUT / LINE FLOW</div>
+    
+    <!-- Fasilitas Pendukung -->
+    <div class="fasilitas">
+        <div class="fas-item">🏢 KANTOR ADMIN</div>
+        <div class="fas-item lab">🔬 LABORATORIUM MUTU</div>
+        <div class="fas-item tk">🍽️ RUANG GANTI & KANTIN TK</div>
+        <div class="fas-item mesin">⚙️ RUANG MESIN & UTILITAS</div>
+    </div>
+    
+    <!-- Area Parkir -->
+    <div class="parkir">🅿️ AREA PARKIR KARYAWAN 🚗🚗🚗</div>
+    
+    <!-- Zona Produksi (Aliran Garis) -->
+    <div class="zona-container">
+        <div class="zona zona1">
+            <h3>📥 ZONA 1</h3>
+            <h3>PENERIMAAN</h3>
+            <p>Loading Dock</p>
+            <p>Timbangan Digital</p>
+            <p>🚚</p>
+        </div>
+        <div class="panah">→</div>
+        
+        <div class="zona zona2">
+            <h3>❄️ ZONA 2</h3>
+            <h3>COOL ROOM</h3>
+            <p>Penyimpanan BB</p>
+            <div class="temp">🌡️ -10°C</div>
+            <p>🧊🧊🧊</p>
+        </div>
+        <div class="panah">→</div>
+        
+        <div class="zona zona3">
+            <h3>🔧 ZONA 3</h3>
+            <h3>RUANG PRODUKSI</h3>
+            <p>SORTIR → FILLET</p>
+            <p>→ PENCUCIAN</p>
+            <p>→ INSPEKSI</p>
+            <div class="temp">⚡ IQF -40°C</div>
+        </div>
+        <div class="panah">→</div>
+        
+        <div class="zona zona4">
+            <h3>📦 ZONA 4</h3>
+            <h3>PENGEMASAN</h3>
+            <p>Sealer Vakum</p>
+            <p>Labeler</p>
+            <p>Metal Detector</p>
+        </div>
+        <div class="panah">→</div>
+        
+        <div class="zona zona5">
+            <h3>❄️ ZONA 5</h3>
+            <h3>FREEZER</h3>
+            <p>Produk Jadi</p>
+            <div class="temp">🌡️ -20°C</div>
+            <p>❄️❄️❄️</p>
+        </div>
+        <div class="panah">→</div>
+        
+        <div class="zona zona6">
+            <h3>🚛 ZONA 6</h3>
+            <h3>PENGIRIMAN</h3>
+            <p>Loading Dock</p>
+            <p>Truk Pendingin</p>
+            <p>🚛🚛</p>
+        </div>
+    </div>
+    
+    <!-- Aliran Produksi -->
+    <div class="aliran">
+        ════════════════════════════════════ 🔴 ALIRAN PRODUKSI (LINE FLOW / PRODUCT LAYOUT) 🔴 ════════════════════════════════════
+    </div>
+    
+    <!-- Legenda -->
+    <div class="legenda">
+        <div class="leg-item"><div class="warna-box" style="background:#4A90E2;"></div> Zona 1: Penerimaan Bahan Baku</div>
+        <div class="leg-item"><div class="warna-box" style="background:#1E3A8A;"></div> Zona 2: Cool Room (-10°C)</div>
+        <div class="leg-item"><div class="warna-box" style="background:#2E7D32;"></div> Zona 3: Ruang Produksi (IQF -40°C)</div>
+        <div class="leg-item"><div class="warna-box" style="background:#F4D03F;"></div> Zona 4: Pengemasan (Vakum + Metal Detector)</div>
+        <div class="leg-item"><div class="warna-box" style="background:#6A1B9A;"></div> Zona 5: Freezer Produk Jadi (-20°C)</div>
+        <div class="leg-item"><div class="warna-box" style="background:#E67E22;"></div> Zona 6: Pengiriman (Loading Dock)</div>
+        <div class="leg-item"><div class="warna-box" style="background:#FF0000;"></div> → = Aliran Produksi (Product Layout)</div>
+    </div>
+    
+    <!-- Informasi Tambahan -->
+    <div class="footer">
+        📌 Layout: Product Layout (Aliran Garis) | Proses: Continuous Process | Berdasarkan halaman 10, 19, 25 PDF MIP<br>
+        ✅ Keuntungan: Efektif & efisien | Kapasitas besar | Pengawasan mudah | Kesalahan produksi kecil
+    </div>
+</div>
+</body>
+</html>
